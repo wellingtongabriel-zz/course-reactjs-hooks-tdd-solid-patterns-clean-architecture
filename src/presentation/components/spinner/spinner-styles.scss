@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.spinner {
+  display: inline-block;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid $primary;
+    border-color: $primary transparent $primary transparent;
+    animation: spinner 1.2s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
