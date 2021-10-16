@@ -41,7 +41,7 @@ describe('Login Component', () => {
     it('Should call validation with correct email', () => {
         const { sut, validationSpy } = makeSut()
         const emailInput = sut.getByTestId('email')
-        const email = faker.internet.email
+        const email = faker.internet.email()
 
         fireEvent.input(emailInput, { target: { value: email } })
         
@@ -52,7 +52,7 @@ describe('Login Component', () => {
     it('Should call validation with correct password', () => {
         const { sut, validationSpy } = makeSut()
         const passwordInput = sut.getByTestId('password')
-        const password = faker.internet.password
+        const password = faker.internet.password()
 
         fireEvent.input(passwordInput, { target: { value: password } })
         
