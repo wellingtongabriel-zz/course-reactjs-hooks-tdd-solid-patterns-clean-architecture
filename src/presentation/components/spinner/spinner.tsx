@@ -3,7 +3,7 @@ import Styles from './spinner-styles.scss'
 
 const Spinner: React.FC<{className: string }> = (props: React.HTMLAttributes<HTMLElement>) => {
     return (
-        <div {...props} className={[Styles.spinner, props.className].join(' ')}></div>
+        <div {...props} data-testid="spinner" className={[Styles.spinner, props.className].join(' ')}></div>
     )
 }
 
