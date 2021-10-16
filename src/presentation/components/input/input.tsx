@@ -16,9 +16,9 @@ const Input: React.FC<Props> = (props: Props) => {
         event.target.readOnly = false
     }
 
-    const getStatus = (): string => '🔴'
+    const getStatus = (): string => error ? '🔴' : '🟢'
 
-    const getTitle = (): string => error
+    const getTitle = (): string => error || 'Tudo certo!'
 
     return (
         <div className={Styles.inputWrap}>
