@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, RenderResult, fireEvent, cleanup, waitFor } from '@testing-library/react'
 import { AuthenticationSpy, ValidationStub } from '@/presentation/test'
-import Login from './login'
+import { Login } from '@/presentation/pages'
 import faker from 'faker'
 import 'jest-localstorage-mock'
 import { InvalidCredentialsError } from '@/domain/errors'
