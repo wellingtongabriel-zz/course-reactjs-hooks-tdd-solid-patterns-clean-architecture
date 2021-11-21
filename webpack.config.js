@@ -36,12 +36,8 @@ module.exports = {
     }]
   },
   devServer: {
-    devMiddleware: {
-      writeToDisk: true
-    },
-    static: {
-      directory: path.join(__dirname, 'public')
-    },
+    contentBase: './public',
+    writeToDisk: true,
     historyApiFallback: true
   },
   externals: {
